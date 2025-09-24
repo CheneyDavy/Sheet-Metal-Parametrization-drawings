@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ButtonConfig
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	Title="参数化工具"
+	Description="参数化批量建模及出图工具"
+	LoadAtStartup="true"
+	LogDir="..\log">
+    <CommandTabs>
+        <CommandTab Title="参数化工具">
+            <Buttons>
+                <CommandBtn	
+					Name="参数化工具"
+					IconPath="..\icons\测试.JPG"
+					AssemblyPath="ParametricTool.UI.dll"
+					FullClassName="ParametricTool.UI.SwButtonEntry"
+					MethodName="ShowParametricToolWindow">
+                    <!-- 表示按钮执行函数的参数 -->
+					<ButtonArgs>
+                    </ButtonArgs>
+					<!-- 表示按钮可用的SW模块 Assembly:装配环境下可用  Drawing:制图环境下可用  Part:零件环境下可用  NoModel:未打开模型的环境下可用   -->
+                    <SensitiveEnvs>
+                        <Env>Assembly</Env>
+                        <Env>Drawing</Env>
+                        <Env>Part</Env>
+                        <Env>NoModel</Env>
+                    </SensitiveEnvs>
+                </CommandBtn>
+            </Buttons>
+        </CommandTab>
+    </CommandTabs>
+</ButtonConfig>

@@ -1,0 +1,16 @@
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\ParametricTool.SwUtils.dll
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\ParametricTool.SwUtils.pdb
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\SolidWorksTools.dll
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.AssemblyReference.cache
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.CoreCompileInputs.cache
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.CopyComplete
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.dll
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.pdb
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\ParametricTool.SwUtils.dll
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\ParametricTool.SwUtils.pdb
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\bin\Debug\SolidWorksTools.dll
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.AssemblyReference.cache
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.CoreCompileInputs.cache
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.csproj.CopyComplete
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.dll
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwUtils\obj\Debug\ParametricTool.SwUtils.pdb

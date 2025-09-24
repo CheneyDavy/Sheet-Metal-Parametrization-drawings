@@ -1,0 +1,91 @@
+2025-09-17 10.32.13.493: **************日志记录开始**************
+2025-09-17 10.32.13.494: 2025-09-17 10.32.13.494: 已开启记录Console功能
+2025-09-17 10.32.13.504: 开始加载HandyControl-->G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\bin\HandyControl.dll
+2025-09-17 10.32.13.515: 加载HandyControl成功!
+2025-09-17 10.32.13.553: 加载dll-->SolidWorksTools, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bd18593873b4686d
+2025-09-17 10.32.13.553: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SolidWorksTools.dll
+2025-09-17 10.32.14.571: 加载dll-->Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.14.571: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll
+2025-09-17 10.32.14.653: 加载dll-->System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.14.653: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Dynamic\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Dynamic.dll
+2025-09-17 10.32.14.664: 加载dll-->Anonymously Hosted DynamicMethods Assembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.14.674: 加载dll-->mscorlib.resources, Version=4.0.0.0, Culture=zh-Hans, PublicKeyToken=b77a5c561934e089
+2025-09-17 10.32.14.674: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_zh-Hans_b77a5c561934e089\mscorlib.resources.dll
+2025-09-17 10.32.15.295: 加载dll-->Set.MachiningDrawing.SwEntry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.295: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.SwEntry.dll
+2025-09-17 10.32.15.303: 加载dll-->Set.MachiningDrawing.SwUtil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.303: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.SwUtil.dll
+2025-09-17 10.32.15.310: 加载dll-->Set.MachiningDrawing.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.310: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.Service.dll
+2025-09-17 10.32.15.319: 加载dll-->Set.MachiningDrawing.Config, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.319: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.Config.dll
+2025-09-17 10.32.15.326: 加载dll-->Set.MachiningDrawing.Util, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.327: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.Util.dll
+2025-09-17 10.32.15.341: 加载dll-->Set.MachiningDrawing.Log, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.341: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.Log.dll
+2025-09-17 10.32.15.365: 解析dll时出错：System.IO.FileNotFoundException: 未能加载文件或程序集“file:///G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\bin\Set.MachiningDrawing.SwEntry.XmlSerializers.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\bin\Set.MachiningDrawing.SwEntry.XmlSerializers.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 ParametricTool.SwEntry.SwAddin.AssemblyResolve(Object sender, ResolveEventArgs args)
+
+程序集管理器加载位置:  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+在可执行文件下运行  D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SLDWORKS.exe
+--- 详细的错误日志如下。
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\bin\Set.MachiningDrawing.SwEntry.XmlSerializers.dll
+日志: Appbase = file:///D:/02.Cad/02.SolidWorks/SW2020_x64/soft/SOLIDWORKS/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SLDWORKS.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 尝试下载新的 URL file:///G:/BaiduSyncdisk/01.Projects/08.ParametricTool/workdir/bin/Set.MachiningDrawing.SwEntry.XmlSerializers.dll。
+
+2025-09-17 10.32.15.372: 加载dll-->Microsoft.GeneratedCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.387: **************日志记录开始**************
+2025-09-17 10.32.15.388: 2025-09-17 10.32.15.388: 已开启记录Console功能
+2025-09-17 10.32.15.394: 加载dll-->Set.MachiningDrawing.Button, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.394: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\Set.MachiningDrawing.Button.dll
+2025-09-17 10.32.15.397: 开始加载HandyControl-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\HandyControl.dll
+2025-09-17 10.32.15.402: 加载dll-->HandyControl, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.402: dll路径-->E:\02.ZCSet\01.code\01.机加出图\测试\MachiningDrawing\bin\HandyControl.dll
+2025-09-17 10.32.15.405: 加载HandyControl成功!
+2025-09-17 10.32.15.684: 加载dll-->SldForum, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.684: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SldForum.dll
+2025-09-17 10.32.15.684: 加载dll-->SldForum, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.15.684: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SldForum.dll
+2025-09-17 10.32.15.886: 加载dll-->Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.15.886: dll路径-->C:\WINDOWS\assembly\GAC\Microsoft.mshtml\7.0.3300.0__b03f5f7f11d50a3a\Microsoft.mshtml.dll
+2025-09-17 10.32.15.886: 加载dll-->Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.15.886: dll路径-->C:\WINDOWS\assembly\GAC\Microsoft.mshtml\7.0.3300.0__b03f5f7f11d50a3a\Microsoft.mshtml.dll
+2025-09-17 10.32.16.407: 加载dll-->SWLoginClientCLR, Version=1.0.7601.38750, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.407: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SWLoginClientCLR.dll
+2025-09-17 10.32.16.407: 加载dll-->SWLoginClientCLR, Version=1.0.7601.38750, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.407: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SWLoginClientCLR.dll
+2025-09-17 10.32.16.420: 加载dll-->loginManagerUtils, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.420: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\loginManagerUtils.dll
+2025-09-17 10.32.16.420: 加载dll-->loginManagerUtils, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.421: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\loginManagerUtils.dll
+2025-09-17 10.32.16.428: 加载dll-->SolidworksLoginClient, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.429: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SolidworksLoginClient.dll
+2025-09-17 10.32.16.429: 加载dll-->SolidworksLoginClient, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.429: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\SolidworksLoginClient.dll
+2025-09-17 10.32.16.437: 加载dll-->loginManagerCore, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.437: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\loginManagerCore.dll
+2025-09-17 10.32.16.437: 加载dll-->loginManagerCore, Version=28.5.0.78, Culture=neutral, PublicKeyToken=null
+2025-09-17 10.32.16.437: dll路径-->D:\02.Cad\02.SolidWorks\SW2020_x64\soft\SOLIDWORKS\loginManagerCore.dll
+2025-09-17 10.32.16.499: 加载dll-->System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2025-09-17 10.32.16.499: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll
+2025-09-17 10.32.16.499: 加载dll-->System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+2025-09-17 10.32.16.499: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll
+2025-09-17 10.32.16.499: 加载dll-->System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.16.499: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll
+2025-09-17 10.32.16.499: 加载dll-->System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2025-09-17 10.32.16.499: dll路径-->C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll

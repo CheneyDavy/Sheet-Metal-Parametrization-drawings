@@ -1,0 +1,12 @@
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.dll
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.pdb
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.AssemblyReference.cache
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.CoreCompileInputs.cache
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.dll
+F:\彭林文档\01.MyProject\05.PLCode\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.pdb
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.dll
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.pdb
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.AssemblyReference.cache
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.CoreCompileInputs.cache
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.dll
+G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.pdb
