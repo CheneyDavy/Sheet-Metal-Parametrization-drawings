@@ -350,12 +350,13 @@ namespace ParametricTool.UI.ViewModels
             InitDataGrid();
             if (Common.Constants.TestMode)
             {
-                TemplateModel = @"G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\temp\新建文件夹 (2)\风口包边法兰.SLDPRT";
-                TemplateDrawing = @"G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\temp\新建文件夹 (2)\风口包边法兰.SLDDRW";
-                InstanceExcel = @"G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\temp\E1-风口包边法兰 OK - 副本.xlsx";
-                OutputPath = @"G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\temp\新建文件夹 (2)";
-                InitModelItemCollection(InstanceExcel);
-                FillDataGridColumns();
+                string testFold = @"G:\BaiduSyncdisk\01.Projects\08.ParametricTool\workdir\temp\2025.09.17-2";
+                TemplateModel = Path.GetFullPath(Path.Combine(testFold, "零件1.SLDPRT"));
+                TemplateDrawing = Path.GetFullPath(Path.Combine(testFold, "热交端板.SLDDRW"));
+                InstanceExcel = Path.GetFullPath(Path.Combine(testFold, "热交端板 - 副本.xlsx"));
+                OutputPath = Path.GetFullPath(Path.Combine(testFold, "output"));
+
+                InitDataGridByExcel(InstanceExcel);
             }
         }
 
@@ -380,19 +381,23 @@ namespace ParametricTool.UI.ViewModels
         private void SelectInstanceExcel()
         {
             string tmp = FileUtil.SelectSingleFile("请选择实例表格", "Excel文件|*.xlsx;*.xls");
-            if (tmp != null)
+            if (!string.IsNullOrWhiteSpace(tmp))
             {
-                #region 初始化ModelItems
-                InitModelItemCollection(tmp);
-                #endregion
-
-                #region 初始化DataGrid
-                InitDataGrid();
-                FillDataGridColumns();
-                #endregion
-
                 InstanceExcel = tmp;
+                InitDataGridByExcel(InstanceExcel);
             }
+        }
+
+        private void InitDataGridByExcel(string excel)
+        {
+            #region 初始化ModelItems
+            InitModelItemCollection(excel);
+            #endregion
+
+            #region 初始化DataGrid
+            InitDataGrid();
+            FillDataGridColumns();
+            #endregion
         }
 
         private void InitModelItemCollection(string tmp)
@@ -400,7 +405,8 @@ namespace ParametricTool.UI.ViewModels
             DataTable dt = ExcelUtil.RenderDataTableFromExcel(tmp, 0, 0);
             ModelItemCollection = new ModelItemCollection();
             //第一行为序号，不用管
-            //第二行固定为模型名称(界面上显示为物料号)
+            //第二行固定为代号
+            ModelItemCollection.NumTitle = dt.Columns[1].ColumnName;
             for (int i = 2; i < dt.Columns.Count; i++)
             {
                 if (string.IsNullOrWhiteSpace(dt.Columns[i].ColumnName))
@@ -568,7 +574,7 @@ namespace ParametricTool.UI.ViewModels
             m_Window.m_DataGrid_ModelItems.Columns.Add(
                 new DataGridTextColumn
                 {
-                    Header = "物料号",
+                    Header = ModelItemCollection?.NumTitle??"物料号",
                     IsReadOnly = true,
                     Binding = new Binding(nameof(ModelItem.Number))
                 });
@@ -631,90 +637,117 @@ namespace ParametricTool.UI.ViewModels
             //2.打开文件
             double[] border = new double[] { 0,0,0,0};
             List<Tuple<string, double[]>> notePoses = new List<Tuple<string, double[]>>();
+            ModelDoc2 modelDoc = null;
             ModelDoc2 drawingDoc = null;
-            if (item.NeedDrawing)
+            try
             {
-                drawingDoc = FileOperation.OpenDoc(item.DrawingFile1, true);
-                Constants.iSwApp.ActivateDoc(item.DrawingFile1);
-                object tmp = (drawingDoc as DrawingDoc).GetCurrentSheet();
-                Sheet sheet = tmp as Sheet;
-                IView[] views = sheet.Ex_GetViews().ToArray();
-
-                List<double[]> outlines = views.Select(x => (double[])x.GetOutline()).ToList();
-                double borderXMin = outlines.Select(x => x[0]).Min() * 1000;
-                double borderXMax = outlines.Select(x => x[2]).Max() * 1000;
-                double borderYMin = outlines.Select(x => x[1]).Min() * 1000;
-                double borderYMax = outlines.Select(x => x[3]).Max() * 1000;
-                border[0] = borderXMin;
-                border[1] = borderYMin;
-                border[2] = borderXMax;
-                border[3] = borderYMax;
-
-                var annos = sheet.Ex_GetSheetAnnos(drawingDoc as DrawingDoc).ToList();
-                foreach (var anno in annos)
+                if (item.NeedDrawing)
                 {
-                    if (anno.GetType() == 6)
+                    drawingDoc = FileOperation.OpenDoc(item.DrawingFile1, true);
+                    Constants.iSwApp.ActivateDoc(item.DrawingFile1);
+                    object tmp = (drawingDoc as DrawingDoc).GetCurrentSheet();
+                    Sheet sheet = tmp as Sheet;
+                    IView[] views = sheet.Ex_GetViews().ToArray();
+
+                    List<double[]> outlines = views.Select(x => (double[])x.GetOutline()).ToList();
+                    double borderXMin = outlines.Select(x => x[0]).Min() * 1000;
+                    double borderXMax = outlines.Select(x => x[2]).Max() * 1000;
+                    double borderYMin = outlines.Select(x => x[1]).Min() * 1000;
+                    double borderYMax = outlines.Select(x => x[3]).Max() * 1000;
+                    border[0] = borderXMin;
+                    border[1] = borderYMin;
+                    border[2] = borderXMax;
+                    border[3] = borderYMax;
+
+                    var annos = sheet.Ex_GetSheetAnnos(drawingDoc as DrawingDoc).ToList();
+                    foreach (var anno in annos)
                     {
-                        INote note = anno.GetSpecificAnnotation();
-                        string text = note.GetText();
-                        double[] pos = (double[])anno.GetPosition();
-                        notePoses.Add(new Tuple<string, double[]>(text, pos));
+                        if (anno.GetType() == 6)
+                        {
+                            INote note = anno.GetSpecificAnnotation();
+                            string text = note.GetText();
+                            double[] pos = (double[])anno.GetPosition();
+                            notePoses.Add(new Tuple<string, double[]>(text, pos));
+                        }
                     }
                 }
-            }
-            ModelDoc2 modelDoc = FileOperation.OpenDoc(item.ModelFile, true);
-            Constants.iSwApp.ActivateDoc(item.ModelFile);
-            item.ModelDoc = modelDoc;
-            //3.设置参数
-            ModelDocExtension swModDocExt = modelDoc.Extension;
-            CustomPropertyManager swCustPropMgr = swModDocExt.CustomPropertyManager[""];
-            List<string> existNames = new List<string>();
-            object tmpNames = swCustPropMgr.GetNames();
-            if (tmpNames != null)
-            {
-                existNames = ((string[])tmpNames).ToList();
-            }
-            for (int i = 0; i < ModelItemCollection.PropTitles.Count; i++)
-            {
-                string title = ModelItemCollection.PropTitles[i];
-                string value = item.PropValues[i];
-                int propType = (int)swCustomInfoType_e.swCustomInfoText;
-                if (existNames.Contains(title))
+                modelDoc = FileOperation.OpenDoc(item.ModelFile, true);
+                Constants.iSwApp.ActivateDoc(item.ModelFile);
+                item.ModelDoc = modelDoc;
+                //3.设置参数
+                ModelDocExtension swModDocExt = modelDoc.Extension;
+                CustomPropertyManager swCustPropMgr = swModDocExt.CustomPropertyManager[""];
+                List<string> existNames = new List<string>();
+                object tmpNames = swCustPropMgr.GetNames();
+                if (tmpNames != null)
                 {
-                    propType = swCustPropMgr.GetType2(title);
-                    if (propType == (int)swCustomInfoType_e.swCustomInfoNumber)
-                    {
-                        propType = (int)swCustomInfoType_e.swCustomInfoDouble;
-                    }
+                    existNames = ((string[])tmpNames).ToList();
                 }
-                swCustPropMgr.Add3(title, propType, value, (int)swCustomPropertyAddOption_e.swCustomPropertyReplaceValue);
-            }
-            
-            bool editRebuild3Result = modelDoc.EditRebuild3();
-            Trace.WriteLine("EditRebuild3-->" + editRebuild3Result);
-            bool forceRebuild33Result = modelDoc.ForceRebuild3(false);
-            Trace.WriteLine("ForceRebuild3-->" + forceRebuild33Result);
-            bool rebuildResult = modelDoc.Extension.Rebuild((int)swRebuildOptions_e.swForceRebuildAll);
-            Trace.WriteLine("Rebuild-->" + rebuildResult);
-            modelDoc.GraphicsRedraw2();
-            
-            modelDoc.ViewZoomtofit2();
+                for (int i = 0; i < ModelItemCollection.PropTitles.Count; i++)
+                {
+                    string title = ModelItemCollection.PropTitles[i];
+                    string value = item.PropValues[i];
+                    int propType = (int)swCustomInfoType_e.swCustomInfoText;
+                    if (existNames.Contains(title))
+                    {
+                        propType = swCustPropMgr.GetType2(title);
+                        if (propType == (int)swCustomInfoType_e.swCustomInfoNumber)
+                        {
+                            propType = (int)swCustomInfoType_e.swCustomInfoDouble;
+                        }
+                    }
+                    swCustPropMgr.Add3(title, propType, value, (int)swCustomPropertyAddOption_e.swCustomPropertyReplaceValue);
+                }
 
-            //4.保存
-            FileOperation.SaveDoc(modelDoc);
-            if (item.NeedDrawing)
-            {
-                FileOperation.SaveDoc(drawingDoc);
+                {
+                    string title = ModelItemCollection.NumTitle;
+                    string value = item.Number;
+                    int propType = (int)swCustomInfoType_e.swCustomInfoText;
+                    if (existNames.Contains(title))
+                    {
+                        propType = swCustPropMgr.GetType2(title);
+                        if (propType == (int)swCustomInfoType_e.swCustomInfoNumber)
+                        {
+                            propType = (int)swCustomInfoType_e.swCustomInfoDouble;
+                        }
+                    }
+                    swCustPropMgr.Add3(title, propType, value, (int)swCustomPropertyAddOption_e.swCustomPropertyReplaceValue);
+                }
+
+                bool editRebuild3Result = modelDoc.EditRebuild3();
+                Trace.WriteLine("EditRebuild3-->" + editRebuild3Result);
+                bool forceRebuild33Result = modelDoc.ForceRebuild3(false);
+                Trace.WriteLine("ForceRebuild3-->" + forceRebuild33Result);
+                bool rebuildResult = modelDoc.Extension.Rebuild((int)swRebuildOptions_e.swForceRebuildAll);
+                Trace.WriteLine("Rebuild-->" + rebuildResult);
+                modelDoc.GraphicsRedraw2();
+
+                modelDoc.ViewZoomtofit2();
+
+                //4.保存
+                FileOperation.SaveDoc(modelDoc);
+                if (item.NeedDrawing)
+                {
+                    FileOperation.SaveDoc(drawingDoc);
+                }
+                //5.工程图
+                if (item.NeedDrawing)
+                {
+                    var drawing = CreateDrawing(item, border, notePoses);
+
+                }
             }
-            //5.工程图
-            if (item.NeedDrawing)
+            finally
             {
-                var drawing = CreateDrawing(item, border, notePoses);
-                
+                if (drawingDoc!=null)
+                {
+                    FileOperation.CloseDoc(drawingDoc, true);
+                }
+                if (modelDoc!=null)
+                {
+                    FileOperation.CloseDoc(modelDoc, false);
+                }
             }
-            //关闭
-            FileOperation.CloseDoc(drawingDoc,true);
-            FileOperation.CloseDoc(modelDoc,false);
         }
         public DrawingDoc CreateDrawing(ModelItem item,double[] border, List<Tuple<string, double[]>> notePoses)
         {

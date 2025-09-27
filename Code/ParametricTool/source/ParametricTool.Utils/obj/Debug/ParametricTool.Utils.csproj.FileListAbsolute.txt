@@ -22,3 +22,15 @@ G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Utils\obj\D
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.csproj.CopyComplete
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.dll
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\ParametricTool.Utils.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\ParametricTool.Utils.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\NPOI.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\NPOI.OOXML.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\NPOI.OpenXml4Net.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.csproj.AssemblyReference.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.csproj.CoreCompileInputs.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.csproj.CopyComplete
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Utils\obj\Debug\ParametricTool.Utils.pdb

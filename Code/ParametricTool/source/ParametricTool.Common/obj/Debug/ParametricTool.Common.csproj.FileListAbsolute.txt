@@ -10,3 +10,9 @@ G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.CoreCompileInputs.cache
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.dll
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\bin\Debug\ParametricTool.Common.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.AssemblyReference.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.csproj.CoreCompileInputs.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.Common\obj\Debug\ParametricTool.Common.pdb

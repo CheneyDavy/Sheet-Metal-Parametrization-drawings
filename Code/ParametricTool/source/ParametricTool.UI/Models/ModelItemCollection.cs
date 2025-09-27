@@ -30,6 +30,25 @@ namespace ParametricTool.UI.Models
         }
         #endregion
 
+        #region 第二列属性Title
+        private string numTitle;
+        /// <summary>
+        /// 第二列属性Title
+        /// </summary>
+        public string NumTitle
+        {
+            get
+            {
+                return numTitle;
+            }
+            set
+            {
+                numTitle = value;
+                OnPropertyChanged(nameof(NumTitle));
+            }
+        }
+        #endregion
+
         #region 自定义属性Title
         private ObservableCollection<string> propTitles = new ObservableCollection<string>();
         /// <summary>

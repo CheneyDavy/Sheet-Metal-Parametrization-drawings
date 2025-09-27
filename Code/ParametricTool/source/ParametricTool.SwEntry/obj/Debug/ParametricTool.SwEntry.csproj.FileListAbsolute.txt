@@ -12,3 +12,10 @@ G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwEntry\obj
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.csproj.CopyComplete
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.dll
 G:\BaiduSyncdisk\01.Projects\08.ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\workdir\bin\ParametricTool.SwEntry.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\workdir\bin\ParametricTool.SwEntry.pdb
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.csproj.AssemblyReference.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.csproj.CoreCompileInputs.cache
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.csproj.CopyComplete
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.dll
+G:\BaiduSyncdisk\05.Github\01.参数化批量建模及出图工具\Code\ParametricTool\source\ParametricTool.SwEntry\obj\Debug\ParametricTool.SwEntry.pdb
